@@ -1,5 +1,6 @@
 <script>
-	import Quote from "./Quote.svelte";
+	import Clock from "./Clock.svelte";
+import Quote from "./Quote.svelte";
 	import Weather from "./Weather.svelte";
 	let quote = null;
 	getBackgroundImage();
@@ -19,5 +20,6 @@
 	<body style="background-image: url('{quote.background}')">
 		<Quote {quote} />
 		<Weather />
+		<Clock />
 	</body>
 {/if}

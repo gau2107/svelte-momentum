@@ -16,7 +16,9 @@ a {
 	color: rgb(0,100,200);
 	text-decoration: none;
 }
-
+h1 {
+	color: rgb(231, 231, 231);
+}
 a:hover {
 	text-decoration: underline;
 }
