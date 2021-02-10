@@ -2,10 +2,12 @@
     let curTime = null;
     setInterval(() => {
       let cur = new Date();
-        curTime = cur.getHours().toString() +':'+ cur.getMinutes().toString();
+      let h = cur.getHours().toString();
+      let m = cur.getMinutes().toString();
+      m = m.length === 1 ? '0'+m : m;
+        curTime = h +':'+ m;
     }, 1000);
 </script>
-<!-- BUG displays 20:0 instead of 20:00 -->
 {#if curTime}
 <h1 class="clock">{curTime}</h1>
 {/if}

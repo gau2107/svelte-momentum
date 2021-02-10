@@ -6,6 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import { config } from 'dotenv';
 import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json'
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -80,6 +82,10 @@ export default {
 				}
 			}),
 		}),
+
+		json({
+			compact: true
+		  }),
 	],
 	watch: {
 		clearScreen: false
