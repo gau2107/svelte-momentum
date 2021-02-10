@@ -21,7 +21,6 @@
             }
         );
         let resInJson = await res.json();
-        console.log(resInJson);
         weather = {...resInJson.main, ...resInJson.weather[0]};
         weather = {...weather, feels_like: convertFromKToC(weather.feels_like), metric: 'C'};
     }
