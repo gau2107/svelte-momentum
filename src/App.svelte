@@ -1,6 +1,7 @@
 <script>
 	import Clock from "./Clock.svelte";
 import Greeting from "./Greeting.svelte";
+import MainFoucs from "./MainFoucs.svelte";
 import Quote from "./Quote.svelte";
 import Todo from "./Todo.svelte";
 	import Weather from "./Weather.svelte";
@@ -23,6 +24,7 @@ import Todo from "./Todo.svelte";
 		<Weather />
 		<Clock />
 		<Greeting />
+		<MainFoucs />
 		<Todo />
 	</body>
 {/if}
