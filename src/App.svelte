@@ -1,6 +1,7 @@
 <script>
 	import Clock from "./Clock.svelte";
 import Quote from "./Quote.svelte";
+import Todo from "./Todo.svelte";
 	import Weather from "./Weather.svelte";
 	let quote = null;
 	getBackgroundImage();
@@ -15,11 +16,11 @@ import Quote from "./Quote.svelte";
 	}
 </script>
 
-<!-- BUG remove upper white space -->
 {#if quote}
-	<body style="background-image: url('{quote.background}')">
+	<body class="noselect" style="background-image: url('{quote.background}')">
 		<Quote {quote} />
 		<Weather />
 		<Clock />
+		<Todo />
 	</body>
 {/if}

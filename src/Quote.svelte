@@ -2,5 +2,5 @@
     export let quote;
 </script>
 {#if quote}
-    <h1>{quote.quote} - {quote.author}</h1>
+    <span class="quote">{quote.quote} - {quote.author}</span>
 {/if}

@@ -14,7 +14,7 @@
 
     async function getCurrentWeather() {
         const res = await fetch(
-            "http://api.openweathermap.org/data/2.5/weather?q=valsad&appid=831e6fa7b7ec4425ad07dc642847be20",
+            "http://api.openweathermap.org/data/2.5/weather?q=valsad&appid="+process.env.WEATHER_API_KEY,
             {
                 method: "GET",
                 accept: "application/json",
@@ -41,9 +41,8 @@
 
 </script>
 {#if weather}
-<div>
-    <h1 on:click={toggle}>{weather.feels_like}°{weather.metric}</h1>
-    <!-- <h1>{weather.main}</h1> -->
+<div class="weather">
     <img src={`http://openweathermap.org/img/w/${weather.icon}.png`} alt={weather.main}/>
+    <span on:click={toggle}>{weather.feels_like}°{weather.metric}</span>
     </div>
 {/if}
