@@ -6,7 +6,7 @@ html, body {
     background-size: cover;
 }
 
-body {
+body, input {
 	color: #333;
 	margin: 0;
 	font-family: 'Bad Script', cursive;
@@ -78,6 +78,7 @@ input, input:focus {
     color: white;
     font-size: 24px;
 	width: 25%;
+	font-weight: 500;
 }
 .mainFocus {
 	font-size: xx-large;
