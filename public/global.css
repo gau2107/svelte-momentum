@@ -6,7 +6,7 @@ html, body {
     background-size: cover;
 }
 
-body {
+body, input {
 	color: #333;
 	margin: 0;
 	font-family: 'Bad Script', cursive;
@@ -16,6 +16,9 @@ body {
     font-size: larger;
 	text-align: center;
 	font-weight: 400;
+}
+.delete {
+	height: 2em;
 }
 .clock {
 	font-size: 200px;
@@ -52,9 +55,9 @@ span, div {
 .weather {
 	display: flex;
     align-items: center;
+    position: fixed;
 	bottom: 0;
     left: 0%;
-    position: fixed;
     font-size: larger;
 }
 .todo {
@@ -78,6 +81,7 @@ input, input:focus {
     color: white;
     font-size: 24px;
 	width: 25%;
+	font-weight: 500;
 }
 .mainFocus {
 	font-size: xx-large;
