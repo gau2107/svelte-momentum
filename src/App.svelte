@@ -3,7 +3,7 @@
 	import Greeting from "./Greeting.svelte";
 	import MainFoucs from "./MainFoucs.svelte";
 	import Quote from "./Quote.svelte";
-	import Todo from "./Todo.svelte";
+	import Todos from "./Todos.svelte";
 	import Weather from "./Weather.svelte";
 
 	// let image = null;
@@ -24,6 +24,6 @@
 		<Clock />
 		<Greeting />
 		<MainFoucs />
-		<Todo />
+		<Todos />
 	</body>
 <!-- {/if} -->

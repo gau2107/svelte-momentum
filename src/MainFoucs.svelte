@@ -18,7 +18,7 @@
 <div class="center">
     {#if !mainFocus}
     <label class="mainFocus" for> What is your main focus for today?</label>
-    <input bind:value={mainFocusInput} on:keyup={e => onKeyup(e)}>
+    <input class="mf" bind:value={mainFocusInput} on:keyup={e => onKeyup(e)}>
     {:else}
     <div>
         <span class="mainFocus">{mainFocus}</span>
