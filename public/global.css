@@ -16,7 +16,7 @@ body, input {
     font-size: larger;
 	text-align: center;
 	font-weight: 400;
-	mix-blend-mode: screen;
+	mix-blend-mode: difference;
 }
 .delete {
 	height: 2em;
