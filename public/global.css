@@ -121,7 +121,11 @@ span, div {
     opacity: 0.7;
 
 }
-.noselect {
+.checkMark {
+	height: 20px;
+    width: 20px;
+}
+.noSelect {
 	-webkit-touch-callout: none; /* iOS Safari */
 	  -webkit-user-select: none; /* Safari */
 	   -khtml-user-select: none; /* Konqueror HTML */

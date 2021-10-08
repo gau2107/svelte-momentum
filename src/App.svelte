@@ -18,7 +18,7 @@
 </script>
 
 <!-- {#if image} -->
-	<body class="noselect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
+	<body class="noSelect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
 		<Quote />
 		<Weather />
 		<Clock />
