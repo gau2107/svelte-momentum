@@ -1,5 +1,6 @@
 <script>
 	import Clock from "./Clock.svelte";
+	import Pomodoro from "./Pomodoro.svelte";
 	import Greeting from "./Greeting.svelte";
 	import MainFoucs from "./MainFoucs.svelte";
 	import Quote from "./Quote.svelte";
@@ -21,7 +22,8 @@
 	<body class="noSelect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
 		<Quote />
 		<Weather />
-		<Clock />
+		<!-- <Clock /> -->
+		<Pomodoro />
 		<Greeting />
 		<MainFoucs />
 		<Todos />
