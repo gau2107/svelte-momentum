@@ -24,10 +24,10 @@ import Timer from "./Timer.svelte";
 	<body class="noSelect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
 		<Quote />
 		<Weather />
-		<Clock />
+		<!-- <Clock /> -->
 		<!-- <Pomodoro /> -->
-		<!-- <Timer /> -->
-		<Stopwatch />
+		<Timer />
+		<!-- <Stopwatch /> -->
 		<Greeting />
 		<MainFoucs />
 		<Todos />

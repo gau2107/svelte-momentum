@@ -1,22 +1,50 @@
 <script>
-    let timer = 10;
+    let timer = 0;
     let displayTime = ''; 
-    
-    const timerInterval = setInterval(() => {
-        timer -= 1;
+    let editMode = false;
+
+    let minInput, secInput;
+
+    function timerLogic(timer) {
+        const timerInterval = setInterval(() => {
+        if(timer)
+            timer -= 1;
         let m = parseInt(timer / 60);
         let s =  timer % 60;
         displayTime = (m < 10 ? '0'+m : m) +':'+ (s < 10 ? '0'+s : s);
-        timer === 0 && playSound();
         timer === 0 && clearInterval(timerInterval)
+        timer === 0 && playSound();
     }, 1000);
-
+    }
+    
+    timerLogic(timer);
     function playSound() {
         const audio = new Audio('/assets/audio/notification.mp3');
         audio.play();
     }
 
+    function toggle() {
+        editMode = !editMode;
+    }
+
+    function setTimer() {
+        let timer = 0;
+        timer = secInput && parseInt(secInput);
+        if(parseInt(minInput))
+            timer += minInput && (parseInt(minInput) * 60);
+        editMode = false;
+        timerLogic(timer);
+    }
+
 </script>
-{#if displayTime}
-<h1 class="clock">{displayTime}</h1>
+{#if editMode}
+<h1 class="clock">
+    <input type="number" max="180" class="mf timerInput" bind:value={minInput} /> : 
+    <input type="number" max="59" class="mf timerInput" bind:value={secInput} />
+    <img class="delete timerIcons" src="/assets/svg/thumb-up.svg" alt="Save" on:click={setTimer}>
+    <img on:click={toggle} class="delete timerIcons" src="/assets/svg/delete.svg" alt="Delte">
+</h1>
+{:else}
+<h1 on:click={toggle} class="clock">{displayTime}
+    </h1>
 {/if}

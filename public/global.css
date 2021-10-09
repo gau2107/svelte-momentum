@@ -93,6 +93,13 @@ span, div {
 	font-weight: 500;
 	mix-blend-mode: screen;
 }
+.timerInput {
+	width: 5% !important;
+}
+.timerIcons {
+	height: 0.5em !important;
+}
+
 .todoInput, .todoInput:focus {
 	background: transparent;
     border-top: none;
@@ -135,4 +142,13 @@ span, div {
 									supported by Chrome, Edge, Opera and Firefox */
   }
 
-  
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
