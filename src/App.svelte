@@ -1,11 +1,13 @@
 <script>
 	import Clock from "./Clock.svelte";
+	import Stopwatch from "./Stopwatch.svelte";
 	import Pomodoro from "./Pomodoro.svelte";
 	import Greeting from "./Greeting.svelte";
 	import MainFoucs from "./MainFoucs.svelte";
 	import Quote from "./Quote.svelte";
 	import Todos from "./Todos.svelte";
 	import Weather from "./Weather.svelte";
+import Timer from "./Timer.svelte";
 
 	// let image = null;
 	// getBackgroundImage();
@@ -22,8 +24,10 @@
 	<body class="noSelect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
 		<Quote />
 		<Weather />
-		<!-- <Clock /> -->
-		<Pomodoro />
+		<Clock />
+		<!-- <Pomodoro /> -->
+		<!-- <Timer /> -->
+		<Stopwatch />
 		<Greeting />
 		<MainFoucs />
 		<Todos />
