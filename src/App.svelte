@@ -1,5 +1,5 @@
 <script>
-	import Clock from "./Clock.svelte";
+	import ClockStack from "./ClockStack.svelte";
 	import Greeting from "./Greeting.svelte";
 	import MainFoucs from "./MainFoucs.svelte";
 	import Quote from "./Quote.svelte";
@@ -18,10 +18,10 @@
 </script>
 
 <!-- {#if image} -->
-	<body class="noselect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
+	<body class="noSelect" style="background-image: url('https://source.unsplash.com/daily?landscape')">
 		<Quote />
 		<Weather />
-		<Clock />
+		<ClockStack/>
 		<Greeting />
 		<MainFoucs />
 		<Todos />

@@ -22,6 +22,12 @@ body, input {
 .delete {
 	height: 2em;
 }
+.clockIcons {
+	height: 2.5em;
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
 .clock {
 	font-size: 200px;
     text-align: center;
@@ -93,6 +99,21 @@ span, div {
 	font-weight: 500;
 	mix-blend-mode: screen;
 }
+.timerInput, .timerInput:focus{
+	width: 12% !important;
+	font-weight: 600 !important;
+    font-size: 150px !important;
+	text-align: center !important;
+}
+.timerIcons {
+	height: 0.5em !important;
+}
+.timerBlock {
+	font-size: 200px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
 .todoInput, .todoInput:focus {
 	background: transparent;
     border-top: none;
@@ -121,7 +142,11 @@ span, div {
     opacity: 0.7;
 
 }
-.noselect {
+.checkMark {
+	height: 20px;
+    width: 20px;
+}
+.noSelect {
 	-webkit-touch-callout: none; /* iOS Safari */
 	  -webkit-user-select: none; /* Safari */
 	   -khtml-user-select: none; /* Konqueror HTML */
@@ -129,6 +154,26 @@ span, div {
 		  -ms-user-select: none; /* Internet Explorer/Edge */
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
-  }
+}
 
-  
+.textCenter {
+	text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::selection {
+	/* Change highlight background color to black */
+	background: white;
+	/* Change highlight text color to red */
+	/* color: #ff0000; */
+  }
