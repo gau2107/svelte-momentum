@@ -35,14 +35,20 @@
         editMode = false;
         timerLogic(timer);
     }
+    function onKeyup(e) {
+        if(e.key === 'Enter') {
+            setTimer();
+        }
+    }
 
 </script>
 {#if editMode}
-<h1 class="clock">
-    <input type="number" max="180" class="mf timerInput" bind:value={minInput} /> : 
-    <input type="number" max="59" class="mf timerInput" bind:value={secInput} />
-    <img class="delete timerIcons" src="/assets/svg/thumb-up.svg" alt="Save" on:click={setTimer}>
-    <img on:click={toggle} class="delete timerIcons" src="/assets/svg/delete.svg" alt="Delte">
+<h1 class="timerBlock">
+    <!-- <div class="timerBlock"> -->
+    <input type="number" max="180" class="mf timerInput" bind:value={minInput} on:keyup={onKeyup} />:<input type="number" max="59" class="mf timerInput" bind:value={secInput} on:keyup={onKeyup}/>
+    <!-- <img class="delete timerIcons" src="/assets/svg/thumb-up.svg" alt="Save" on:click={setTimer}> -->
+    <!-- <img on:click={toggle} class="delete timerIcons" src="/assets/svg/delete.svg" alt="Delte"> -->
+<!-- </div> -->
 </h1>
 {:else}
 <h1 on:click={toggle} class="clock">{displayTime}

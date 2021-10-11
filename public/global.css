@@ -93,11 +93,19 @@ span, div {
 	font-weight: 500;
 	mix-blend-mode: screen;
 }
-.timerInput {
-	width: 5% !important;
+.timerInput, .timerInput:focus{
+	width: 12% !important;
+	font-weight: 600 !important;
+    font-size: 150px !important;
+	text-align: center !important;
 }
 .timerIcons {
 	height: 0.5em !important;
+}
+.timerBlock {
+	font-size: 200px;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
 .todoInput, .todoInput:focus {
@@ -152,3 +160,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+::selection {
+	/* Change highlight background color to black */
+	background: white;
+	/* Change highlight text color to red */
+	/* color: #ff0000; */
+  }
