@@ -22,6 +22,12 @@ body, input {
 .delete {
 	height: 2em;
 }
+.clockIcons {
+	height: 2.5em;
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
 .clock {
 	font-size: 200px;
     text-align: center;
@@ -148,7 +154,11 @@ span, div {
 		  -ms-user-select: none; /* Internet Explorer/Edge */
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
-  }
+}
+
+.textCenter {
+	text-align: center;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

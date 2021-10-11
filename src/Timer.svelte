@@ -1,7 +1,7 @@
 <script>
     let timer = 0;
     let displayTime = ''; 
-    let editMode = false;
+    let editMode = true;
 
     let minInput, secInput;
 
@@ -13,7 +13,7 @@
         let s =  timer % 60;
         displayTime = (m < 10 ? '0'+m : m) +':'+ (s < 10 ? '0'+s : s);
         timer === 0 && clearInterval(timerInterval)
-        timer === 0 && playSound();
+        timer === 0 && !editMode && playSound();
     }, 1000);
     }
     
