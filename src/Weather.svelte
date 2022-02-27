@@ -22,7 +22,7 @@
 
     async function getCurrentWeather(position) {
         const res = await fetch(
-            `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${process.env.WEATHER_API_KEY}`,
+            `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${process.env.WEATHER_API_KEY}`,
             {
                 method: "GET",
                 accept: "application/json",
