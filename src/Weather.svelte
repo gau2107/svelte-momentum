@@ -49,7 +49,7 @@
 </script>
 {#if weather}
 <div class="weather">
-    <img src={`http://openweathermap.org/img/w/${weather.icon}.png`} alt={weather.main}/>
+    <img src={`https://openweathermap.org/img/w/${weather.icon}.png`} alt={weather.main}/>
     <span on:click={toggle}>{weather.feels_like}°{weather.metric}</span>
     </div>
 {/if}
