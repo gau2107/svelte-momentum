@@ -33,12 +33,14 @@ body, input {
     text-align: center;
 	margin-bottom: 0px;
 	mix-blend-mode: screen;
+	text-shadow: #000 1px 0 5px;
 }
 .greeting {
 	font-size: 60px;
     text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	text-shadow: #000 1px 0 5px;
 	/* mix-blend-mode: screen; */
 }
 a {
@@ -48,6 +50,7 @@ a {
 h1 {
 	color: white;
 	mix-blend-mode: screen;
+	text-shadow: #000 1px 0 5px;
 }
 a:hover {
 	text-decoration: underline;
@@ -71,6 +74,9 @@ span, div {
     left: 0%;
     font-size: larger;
 	mix-blend-mode: screen;
+}
+.weather span {
+	cursor: pointer;
 }
 .todo {
     padding: 15px;

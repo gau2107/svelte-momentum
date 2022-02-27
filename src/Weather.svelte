@@ -10,11 +10,19 @@
 
     //   navigator.geolocation.getCurrentPosition(successCallback, error);
     let weather = null;
-    getCurrentWeather();
+    getLocation();
 
-    async function getCurrentWeather() {
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getCurrentWeather);
+        } else { 
+            console.log("Geolocation is not supported by this browser.");
+        }
+    }
+
+    async function getCurrentWeather(position) {
         const res = await fetch(
-            "http://api.openweathermap.org/data/2.5/weather?q=valsad&appid="+process.env.WEATHER_API_KEY,
+            `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${process.env.WEATHER_API_KEY}`,
             {
                 method: "GET",
                 accept: "application/json",

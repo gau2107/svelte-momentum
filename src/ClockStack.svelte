@@ -3,7 +3,7 @@
     import Stopwatch from "./Stopwatch.svelte";
 	import Pomodoro from "./Pomodoro.svelte";
     import Timer from "./Timer.svelte";
-    $: active = "Pomodoro";
+    $: active = "Clock";
     function changeStatus(arg) {
         active = arg;
     }
