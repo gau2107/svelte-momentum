@@ -21,7 +21,7 @@ body, input {
     text-shadow: #000 1px 0 5px;
 }
 .delete {
-	height: 2em;
+	height: 1.5em;
 	cursor: pointer;
 }
 .clockIcons {
