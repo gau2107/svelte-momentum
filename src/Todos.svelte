@@ -6,7 +6,6 @@
   let todos = JSON.parse(localStorage.getItem("todos"));
 
   function onKeyup(e) {
-    console.log(editIndex);
     if (e.key === "Enter") {
       if (editIndex >= 0) editTodo(e);
       else addTodo(e);
@@ -32,15 +31,18 @@
     localStorage.setItem("todos", JSON.stringify(todos));
     todos = [...todos];
   }
+
   function checkTodo(e) {
     todos[e.detail].checked = true;
     localStorage.setItem("todos", JSON.stringify(todos));
   }
+
   function setEditForm(e) {
     let cur = todos[e.detail];
     todoInput = cur.title;
     editIndex = e.detail;
   }
+  
 </script>
 
 <div class="todo">
