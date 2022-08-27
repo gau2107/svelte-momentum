@@ -9,6 +9,10 @@
     function checked() {
         dispatch('checkTodo', index);
     }
+
+    function edit() {
+        dispatch('setEditForm', index)
+    }
 </script>
 
 <div>
@@ -17,6 +21,6 @@
     {:else}
     <input class="checkMark" type="checkbox" bind:checked={current.checked} on:click={checked}>
     {/if}
-    <span class={current.checked ? "checked mainFocus" : "mainFocus"}>{current.title}</span>
+    <span on:click={edit} class={current.checked ? "checked mainFocus" : "mainFocus"}>{current.title}</span>
     <img on:click={clear} class="delete" src="/assets/svg/delete.svg" alt="Delte">
 </div>
