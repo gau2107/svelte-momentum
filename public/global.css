@@ -4,6 +4,7 @@ html, body {
     background: no-repeat;
     height: 100%;
     background-size: cover;
+		overflow: hidden;
 }
 
 body, input {
@@ -20,12 +21,14 @@ body, input {
     text-shadow: #000 1px 0 5px;
 }
 .delete {
-	height: 2em;
+	height: 1.5em;
+	cursor: pointer;
 }
 .clockIcons {
 	height: 2.5em;
 	padding-right: 5px;
 	padding-left: 5px;
+	cursor: pointer;
 
 }
 .clock {
@@ -137,6 +140,7 @@ span, div {
 	mix-blend-mode: screen;
 }
 .mainFocus {
+	cursor: pointer;
 	font-size: xx-large;
     font-weight: 600;
 }
