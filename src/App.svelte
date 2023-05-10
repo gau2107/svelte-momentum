@@ -6,21 +6,12 @@
   import Todos from "./Todos.svelte";
   import Weather from "./Weather.svelte";
 
-  // let image = null;
-  // getBackgroundImage();
-
-  // async function getBackgroundImage () {
-  // 	const res = await fetch('https://picsum.photos/1280/720.webp', {
-  // 		method: 'GET'
-  // 	})
-  // 	image = await res.url;
-  // }
+  let scape = window.window.innerWidth > 768 ? "landscape" : "potrait";
 </script>
 
-<!-- {#if image} -->
 <body
-  class="noSelect"
-  style="background-image: url('https://source.unsplash.com/daily?landscape')"
+  class="noSelect main"
+  style={`background-image: url('https://source.unsplash.com/daily?${scape}')`}
 >
   <Quote />
   <Weather />
@@ -29,4 +20,3 @@
   <MainFoucs />
   <Todos />
 </body>
-<!-- {/if} -->
