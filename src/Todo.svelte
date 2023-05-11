@@ -15,7 +15,7 @@
   }
 </script>
 
-<div>
+<div class="todo-div">
   {#if current.checked}
     <img class="delete" src="/assets/svg/thumb-up.svg" alt="Checked" />
   {:else}
@@ -35,6 +35,6 @@
     on:click={clear}
     class="delete"
     src="/assets/svg/delete.svg"
-    alt="Delte"
+    alt="Delete"
   />
 </div>

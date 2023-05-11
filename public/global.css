@@ -1,173 +1,181 @@
-html, body {
-	position: relative;
-    width: 100%;
-    background: no-repeat;
-    height: 100%;
-    background-size: cover;
-		overflow: hidden;
+html,
+body {
+  position: relative;
+  width: 100%;
+  background: no-repeat;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
 }
 
-body, input {
-	color: #333;
-	margin: 0;
-	font-family: 'Bad Script', cursive;
+body,
+input {
+  color: #333;
+  margin: 0;
+  font-family: "Bad Script", cursive;
 }
 .quote {
-	color: white;
-    font-size: larger;
-    text-align: center;
-    font-weight: 400;
-    /* mix-blend-mode: difference; */
-    text-shadow: #000 1px 0 5px;
+  color: white;
+  font-size: larger;
+  text-align: center;
+  font-weight: 400;
+  /* mix-blend-mode: difference; */
+  text-shadow: #000 1px 0 5px;
 }
 .delete {
-	height: 1.5em;
-	cursor: pointer;
+  height: 1.5em;
+  cursor: pointer;
 }
 .clockIcons {
-	height: 2.5em;
-	padding-right: 5px;
-	padding-left: 5px;
-	cursor: pointer;
-
+  height: 2.5em;
+  padding-right: 5px;
+  padding-left: 5px;
+  cursor: pointer;
 }
 .clock {
-	font-size: 200px;
-    text-align: center;
-	margin-bottom: 0px;
-	mix-blend-mode: screen;
-	text-shadow: #000 1px 0 5px;
+  font-size: 200px;
+  text-align: center;
+  margin-bottom: 0px;
+  mix-blend-mode: screen;
+  text-shadow: #000 1px 0 5px;
 }
 .greeting {
-	font-size: 60px;
-    text-align: center;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	text-shadow: #000 1px 0 5px;
-	/* mix-blend-mode: screen; */
+  font-size: 60px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-shadow: #000 1px 0 5px;
+  /* mix-blend-mode: screen; */
 }
 a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+  color: rgb(0, 100, 200);
+  text-decoration: none;
 }
 h1 {
-	color: white;
-	mix-blend-mode: screen;
-	text-shadow: #000 1px 0 5px;
+  color: white;
+  mix-blend-mode: screen;
+  text-shadow: #000 1px 0 5px;
 }
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:visited {
-	color: rgb(0,80,160);
+  color: rgb(0, 80, 160);
 }
 
 label {
-	display: block;
+  display: block;
 }
-span, div {
-	color: white;
+span,
+div {
+  color: white;
 }
 .weather {
-	display: flex;
-    align-items: center;
-    position: fixed;
-	bottom: 0;
-    left: 0%;
-    font-size: larger;
-	mix-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  font-size: larger;
+  mix-blend-mode: screen;
 }
 .weather span {
-	cursor: pointer;
+  cursor: pointer;
 }
 .todo {
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    right: 0%;
-	font-size: larger;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  right: 0%;
+  font-size: larger;
 }
-.todo span{
-	mix-blend-mode: screen;
+.todo div {
+  max-width: 250px;
+}
+.todo span {
+  mix-blend-mode: screen;
+	word-wrap: break-word;
 }
 
-.mf, .mf:focus {
-	background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: white;
-    outline: none;
-    padding: 6px 6px;
-    box-sizing: border-box;
-    color: white;
-    font-size: 24px;
-	width: 25%;
-	font-weight: 500;
-	mix-blend-mode: screen;
+.mf,
+.mf:focus {
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid;
+  border-color: white;
+  outline: none;
+  padding: 6px 6px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 24px;
+  width: 25%;
+  font-weight: 500;
+  mix-blend-mode: screen;
 }
-.timerInput, .timerInput:focus{
-	width: 12% !important;
-	font-weight: 600 !important;
-    font-size: 150px !important;
-	text-align: center !important;
+.timerInput,
+.timerInput:focus {
+  width: 12% !important;
+  font-weight: 600 !important;
+  font-size: 150px !important;
+  text-align: center !important;
 }
 .timerIcons {
-	height: 0.5em !important;
+  height: 0.5em !important;
 }
 .timerBlock {
-	font-size: 200px;
-    text-align: center;
-    margin-bottom: 0px;
+  font-size: 200px;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
-.todoInput, .todoInput:focus {
-	background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid;
-    border-color: white;
-    outline: none;
-    /* padding: 6px 6px; */
-    box-sizing: border-box;
-    color: white;
-    font-size: 16px;
-	/* width: 5%; */
-	/* font-weight: 400; */
-	mix-blend-mode: screen;
+.todoInput,
+.todoInput:focus {
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid;
+  border-color: white;
+  outline: none;
+  /* padding: 6px 6px; */
+  box-sizing: border-box;
+  color: white;
+  font-size: 16px;
+  /* width: 5%; */
+  /* font-weight: 400; */
+  mix-blend-mode: screen;
 }
 .mainFocus {
-	cursor: pointer;
-	font-size: xx-large;
-    font-weight: 600;
+  cursor: pointer;
+  font-size: xx-large;
+  font-weight: 600;
 }
 .center {
-	text-align: center;
+  text-align: center;
 }
 .checked {
-	text-decoration: line-through;
-    opacity: 0.7;
-
+  text-decoration: line-through;
+  opacity: 0.7;
 }
 .checkMark {
-	height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
 }
 .noSelect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	  -webkit-user-select: none; /* Safari */
-	   -khtml-user-select: none; /* Konqueror HTML */
-		 -moz-user-select: none; /* Old versions of Firefox */
-		  -ms-user-select: none; /* Internet Explorer/Edge */
-			  user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
 .textCenter {
-	text-align: center;
+  text-align: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -177,13 +185,10 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 ::selection {
-	/* Change highlight background color to black */
-	background: white;
-	/* Change highlight text color to red */
-	/* color: #ff0000; */
-  }
+  background: white;
+}
