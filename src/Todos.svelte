@@ -6,6 +6,7 @@
   let todos = JSON.parse(localStorage.getItem("todos"));
 
   function onKeyup(e) {
+    if (!todoInput) return;
     if (e.key === "Enter") {
       if (editIndex >= 0) editTodo(e);
       else addTodo(e);
@@ -24,6 +25,7 @@
     todos[editIndex].title = todoInput;
     localStorage.setItem("todos", JSON.stringify(todos));
     editIndex = undefined;
+    todoInput = "";
   }
 
   function deleteTodo(e) {
@@ -42,7 +44,6 @@
     todoInput = cur.title;
     editIndex = e.detail;
   }
-  
 </script>
 
 <div class="todo">

@@ -89,13 +89,20 @@ div {
   bottom: 0;
   right: 0%;
   font-size: larger;
+  display: flex;
+  flex-direction: column;
 }
 .todo div {
   max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 .todo span {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
   mix-blend-mode: screen;
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .mf,
