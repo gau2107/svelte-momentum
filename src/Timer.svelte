@@ -1,22 +1,30 @@
 <script>
-  let timer = 0;
   let displayTime = "";
   let editMode = true;
+  let targetTime;
 
   let minInput, secInput;
 
   function timerLogic(timer) {
     const timerInterval = setInterval(() => {
-      if (timer) timer -= 1;
-      let m = parseInt(timer / 60);
-      let s = timer % 60;
-      displayTime = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
-      timer === 0 && clearInterval(timerInterval);
-      timer === 0 && !editMode && playSound();
+      let currentTime = +new Date(); // Get the current timestamp
+      setDisplayTime();
+      if (currentTime >= targetTime) {
+        clearInterval(timerInterval);
+        !editMode && playSound();
+      }
+      if (editMode) clearInterval(timerInterval);
     }, 1000);
   }
 
-  timerLogic(timer);
+  function setDisplayTime() {
+    let currentTime = +new Date(); // Get the current timestamp
+    let timeRemaining = targetTime - currentTime; // Calculate the remaining time in milliseconds
+    let secondsRemaining = Math.ceil(timeRemaining / 1000);
+    let m = parseInt(secondsRemaining / 60);
+    let s = secondsRemaining % 60;
+    displayTime = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+  }
   function playSound() {
     const audio = new Audio("/assets/audio/notification.mp3");
     audio.play();
@@ -24,6 +32,8 @@
 
   function toggle() {
     editMode = !editMode;
+    minInput = null;
+    secInput = null;
   }
 
   function setTimer() {
@@ -31,18 +41,16 @@
     timer = secInput && parseInt(secInput);
     if (parseInt(minInput)) timer += minInput && parseInt(minInput) * 60;
     editMode = false;
+    targetTime = +new Date() + timer * 1000;
+    setDisplayTime();
     timerLogic(timer);
   }
-  function onKeyup(e) {
-    if (e.key === "Enter") {
-      setTimer();
-    }
-  }
+
+  const onKeyup = (e) => e.key === "Enter" && setTimer();
 </script>
 
 {#if editMode}
   <h1 class="timerBlock">
-    <!-- <div class="timerBlock"> -->
     <input
       type="number"
       max="180"
@@ -56,10 +64,15 @@
       bind:value={secInput}
       on:keyup={onKeyup}
     />
-    <!-- <img class="delete timerIcons" src="/assets/svg/thumb-up.svg" alt="Save" on:click={setTimer}> -->
-    <!-- <img on:click={toggle} class="delete timerIcons" src="/assets/svg/delete.svg" alt="Delte"> -->
-    <!-- </div> -->
   </h1>
 {:else}
-  <h1 on:click={toggle} class="clock">{displayTime}</h1>
+  <h1 on:click={toggle} class="clock">
+    {displayTime}
+    <img
+      on:click={toggle}
+      class="delete timerIcons"
+      src="/assets/svg/delete.svg"
+      alt="Delete"
+    />
+  </h1>
 {/if}
