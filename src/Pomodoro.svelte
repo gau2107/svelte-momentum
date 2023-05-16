@@ -1,5 +1,5 @@
 <script>
-  let timer = 150; //change this to 1500 for 25 minutes
+  let timer = 1500; // 25 minutes in seconds
   let targetTime;
   let displayTime = setDisplayTime();
 
