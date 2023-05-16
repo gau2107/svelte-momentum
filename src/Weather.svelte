@@ -1,14 +1,4 @@
 <script>
-  // FIXME always error
-  //     function successCallback (position) {
-  //         console.log(position.coords.latitude);
-  //         console.log(position.coords.longitude);
-  //     }
-  //     function error() {
-  //     console.log('Unable to retrieve your location');
-  //   }
-
-  //   navigator.geolocation.getCurrentPosition(successCallback, error);
   let weather = null;
   getLocation();
 
