@@ -38,8 +38,9 @@
 
   function setTimer() {
     let timer = 0;
-    timer = secInput && parseInt(secInput);
+    timer = secInput ? parseInt(secInput) : 0;
     if (parseInt(minInput)) timer += minInput && parseInt(minInput) * 60;
+    if (!timer) return;
     editMode = false;
     targetTime = +new Date() + timer * 1000;
     setDisplayTime();
